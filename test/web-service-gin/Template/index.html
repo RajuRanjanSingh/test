@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body style="background-color:powderblue;">
+    <h1 style="text-align:center;">Leave Form</h1>
+      <form action="http://localhost:4747/LeaveFormTables" method="POST" style="text-align:center;">
+            <label  for="name" >Name : </label>
+            <input type="text" name="Name" required/><br>
+
+            <label  >Leave_Type :</label>
+          <select name="Leave_Type">
+            <option value="select option">select option</option>
+            <option value="Casual_Leave">Casual_Leave</option>
+            <option value="Earned_leave">Earned_leave</option>
+            <option value="Sick_Leave">Sick_Leave</option>
+          </select>
+          <br>
+            <label for="Fromdate" >Date : Fromdate</label>
+            <input type="date" name="fromdate"> <br>Todate
+            <input type="date" name="Todate">
+            <p for="Team_Name" >Team_Name:</p>
+            <input type="radio" name="Team_Name" value="Designops" >
+            <label for="Designops">Designops</label><br>
+            <input type="radio" name="Team_Name" value="Secops">
+            <label for="Secops">Secops</label><br>
+            <input type="radio" name="Team_Name" value="cloudops">
+            <label for="cloudops">cloudops</label>
+          <br>
+            <label for="File_upload">File_upload</label>
+            <input type="file" name="File_upload">
+          <br>
+            <label for="Reporter" >Reporter</label>
+            <select name="Reporter" name="Reporter">
+            <option value="select option" selected>select option</option>
+            <option value="sandeep sir">sandeep sir</option>
+            <option value="suraj sir">suraj sir</option>
+            <option value="amit sir">Amit Sir</option>
+          </select>
+          <br>
+          <br>
+          <input type="submit" name="submit">
+          </form>
+  </body>
+</html>

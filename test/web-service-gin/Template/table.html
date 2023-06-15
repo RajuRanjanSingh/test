@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+<table id="emptable">
+</table>
+<script>
+    function fetchAndGenerateTable() {
+  // Send a GET request to the server
+  fetch('http://localhost:4747/LeaveFormTable')
+    .then(response => response.json())
+    .then(data => {
+      // Check if data is an array
+      if (Array.isArray(data.data)) {
+        // Clear the existing table rows
+        const table = document.getElementById('emptable');
+        table.innerHTML = `
+          <th>name</th>
+          <th>leavetype</th>
+          <th>fromdate</th>
+          <th>todate</th>
+          <th>teamname</th>
+          <th>File</th>
+          <th>Reporter</th>
+        `;
+        // Generate table rows from the fetched data
+        data.data.forEach(employee => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${employee.name}</td>
+            <td>${employee.leave_type}</td>
+            <td>${employee.fromdate}</td>
+            <td>${employee.todate}</td>
+            <td>${employee.team_name}</td>
+            <td>${employee.file_upload}</td>
+            <td>${employee.reporter}</td>
+          `;
+          table.appendChild(row);
+        });
+      } else {
+        console.error('Data is not an array:', data);
+      }
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+// Load the table on page load
+document.addEventListener('DOMContentLoaded', function () {
+  fetchAndGenerateTable();
+});
+
+</script>
+</body>
+</html>
+

@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Raju",
+        "leavetype": "Blue Train",
+        "fromdate": "2023/06/09",
+        "todate": "2023/06/19",
+        "team name": "Designops",
+        "file upload": "https://go.dev/doc/tutorial/web-service-gin",
+        "reporter": "Sandeep sir"
+    },
+    {
+        "name": "Ranjan",
+        "leavetype": "Jeru",
+        "fromdate": "2023/06/09",
+        "todate": "2023/06/09",
+        "team name": "secops",
+        "file upload": "https://go.dev/doc/tutorial/web-service-gin",
+        "reporter": "Sandeep sir"
+    },
+    {
+        "name": "Pankaj",
+        "leavetype": "Sarah Vaughan and Clifford Brown",
+        "fromdate": "2023/06/09",
+        "todate": "2023/06/09",
+        "team name": "platform",
+        "file upload": "https://go.dev/doc/tutorial/web-service-gin",
+        "reporter": "Sandeep sir"
+    }
+]--_curl_--Name: "Raju"
+--_curl_-- Leave_Type: "Blue Train"
+--_curl_-- Fromdate: "2023/06/09"
+--_curl_-- Todate:"2023/06/19"
+--_curl_--Team_Name:"Designops"
+--_curl_--File_upload:"https://go.dev/doc/tutorial/web-service-gin"
+--_curl_--Reporter:"Sandeep sir"
